@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -142,8 +148,18 @@ nav .active {
 }
 
 .card .img {
+    width: 100%;
     height: 100px;
     background-color: #888;
+}
+
+.card2 {
+    flex-direction: row;
+}
+
+.card2 .img {
+    width: 100px;
+    height: 100%;
 }
 
 .activities .card {
@@ -166,4 +182,46 @@ nav .active {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    height: calc(100% - 1rem);
+    padding: 0.5rem;
+}
+.content p {
+    padding: 0.1rem;
+    margin: 0;
+}
+
+footer {
+    background: #888;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+footer .block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+footer .title {
+    font-weight: 700;
+}
+footer p {
+    padding: 0;
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        flex-direction: column;
+    }
 }
